@@ -42,7 +42,7 @@ g1 = Entry(window).grid(row = 10,column = 1)
 h1 = Entry(window).grid(row = 11,column = 1)
 i1 = Entry(window).grid(row = 12,column = 1)
 j1 = Entry(window).grid(row = 13,column = 1)
-k1 = Entry(window).grid(row =14,column = 1)
+
 
 def clicked():
     res = "Welcome to Best Enlist"
