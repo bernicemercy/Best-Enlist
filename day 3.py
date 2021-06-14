@@ -1,5 +1,7 @@
 from tkinter import *
 from tkinter import ttk
+import tkinter.messagebox
+
 window = Tk()
 window.title("Registration Screen")
 window.geometry('300x400')
@@ -8,11 +10,11 @@ window.configure(background = "#ECFFDC")
 a = Label(window,text="First Name",background="#ECFFDC",foreground="black").grid(row=0,column=0)
 b = Label(window,text="last Name",background="#ECFFDC",foreground="black").grid(row=1,column=0)
 
-# gender radiobox
+# gender radiobutton
 l = Label(window,text="Gender : ",background="#ECFFDC",foreground="black").grid(row=2,column = 0)
-l1 = Radiobutton(window,text="M",background="#ECFFDC",foreground="black",).grid(row=3,column = 0)
-l2 = Radiobutton(window,text="F",background="#ECFFDC",foreground="black",).grid(row=4,column = 0)
-l3 = Radiobutton(window,text="T",background="#ECFFDC",foreground="black").grid(row=5,column = 0)
+l1 = Radiobutton(window,text="M",value=1,background="#ECFFDC",foreground="black",).grid(row=3,column = 0)
+l2 = Radiobutton(window,text="F",value=2,background="#ECFFDC",foreground="black",).grid(row=4,column = 0)
+l3 = Radiobutton(window,text="T",value=3,background="#ECFFDC",foreground="black").grid(row=5,column = 0)
 
 c = Label(window,text="Email ID",background="#ECFFDC",foreground="black").grid(row=6,column=0)
 d = Label(window,text="Contact number",background="#ECFFDC",foreground="black").grid(row=7,column=0)
@@ -45,7 +47,6 @@ j1 = Entry(window).grid(row = 13,column = 1)
 
 
 def clicked():
-    res = "Welcome to Best Enlist"
-    lbl.configure(text = res)
-btn = ttk.Button(window,text="submit").grid(row = 17,column = 2)
+    tkinter.messagebox.showinfo("Welcome to Best Enlist","you have successfully registered")
+btn = ttk.Button(window,text="submit",command=clicked).grid(row = 17,column = 2)
 window.mainloop()
